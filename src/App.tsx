@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
-
+import Layout from "containers/Layout";
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Layout>
+        <h1>Hello world</h1>
+      </Layout>
     </div>
   );
 }
