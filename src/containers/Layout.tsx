@@ -1,14 +1,16 @@
+import Header from "components/common/Header";
 import React from "react";
+import { Main, Root } from "./Layout.styled";
 
 interface PropsType {
   children: React.ReactNode;
 }
 const Layout = ({ children }: PropsType) => {
   return (
-    <div>
-      <header>헤더</header>
-      {children}
-    </div>
+    <Root>
+      <Header />
+      <Main>{children}</Main>
+    </Root>
   );
 };
 
