@@ -9,6 +9,6 @@ export const Main = styled.main`
   flex-basis: var(--main-max-width);
 
   height: 1000px;
-
-  border: 1px solid var(--main-border-color);
 `;
+
+// border: 1px solid var(--main-border-color);
