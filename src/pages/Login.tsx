@@ -1,5 +1,12 @@
+import { Footer, Main, Root } from "./Login.styled";
+
 const LoginPage = () => {
-  return <div>you need to log in</div>;
+  return (
+    <Root>
+      <Main>Login here</Main>
+      <Footer>Footer here</Footer>
+    </Root>
+  );
 };
 
 export default LoginPage;
