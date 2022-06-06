@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import TextField from "@mui/material/TextField";
 
 export const Root = styled.div`
   height: 100vh;
@@ -18,4 +19,12 @@ export const Main = styled.section`
 export const Footer = styled.section`
   height: 10vh;
   background-color: white;
+`;
+
+export const InputField = styled(TextField)`
+  fieldset {
+    border-radius: 50px;
+  }
+
+  margin-top: 1.5rem;
 `;

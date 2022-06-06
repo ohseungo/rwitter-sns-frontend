@@ -1,6 +1,6 @@
-import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import useInput from "utils/hooks/useInput";
-import { Footer, Main, Root } from "./Login.styled";
+import { Footer, InputField, Main, Root } from "./Login.styled";
 
 const LoginPage = () => {
   const { value: email, onChange: onChangeEmail } = useInput("");
@@ -9,8 +9,8 @@ const LoginPage = () => {
   return (
     <Root>
       <Main>
-        <div>무슨 일이 일어나고 있나요?</div>
-        <TextField
+        <Typography variant="h1">무슨 일이 일어나고 있나요?</Typography>
+        <InputField
           id="email-input"
           label="Email"
           type="email"
@@ -19,7 +19,7 @@ const LoginPage = () => {
           onChange={onChangeEmail}
           fullWidth
         />
-        <TextField
+        <InputField
           id="password-input"
           label="Password"
           type="password"
