@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import useInput from "utils/hooks/useInput";
-import { Footer, InputField, Main, Root } from "./Login.styled";
+import { Footer, InputField, Main, Root, SubmitButton } from "./Login.styled";
 
 const LoginPage = () => {
   const { value: email, onChange: onChangeEmail } = useInput("");
@@ -30,6 +30,9 @@ const LoginPage = () => {
           fullWidth
           margin="dense"
         />
+        <SubmitButton type="submit" fullWidth variant="contained">
+          로그인하기
+        </SubmitButton>
       </Main>
       <Footer>Footer here</Footer>
     </Root>
