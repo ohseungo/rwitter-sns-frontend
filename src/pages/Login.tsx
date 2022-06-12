@@ -1,15 +1,22 @@
-import Typography from "@mui/material/Typography";
 import useInput from "utils/hooks/useInput";
-import { Footer, InputField, Main, Root, SubmitButton } from "./Login.styled";
+import {
+  Footer,
+  InputField,
+  LogoText,
+  Main,
+  Root,
+  SubmitButton,
+} from "./Login.styled";
 
 const LoginPage = () => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
+  const handleSubmit = () => {};
   return (
     <Root>
       <Main>
-        <Typography variant="h1">무슨 일이 일어나고 있나요?</Typography>
+        <LogoText variant="h1">무슨 일이 일어나고 있나요?</LogoText>
         <InputField
           id="email-input"
           label="Email"
@@ -30,11 +37,16 @@ const LoginPage = () => {
           fullWidth
           margin="dense"
         />
-        <SubmitButton type="submit" fullWidth variant="contained">
+        <SubmitButton
+          type="submit"
+          fullWidth
+          variant="contained"
+          onClick={handleSubmit}
+        >
           로그인하기
         </SubmitButton>
       </Main>
-      <Footer>Footer here</Footer>
+      <Footer>© 2022 by RickSW.dev</Footer>
     </Root>
   );
 };
