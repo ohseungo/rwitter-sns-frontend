@@ -14,10 +14,11 @@ const LoginPage = () => {
           id="email-input"
           label="Email"
           type="email"
-          variant="outlined"
           value={email}
           onChange={onChangeEmail}
           fullWidth
+          margin="dense"
+          autoFocus
         />
         <InputField
           id="password-input"
@@ -27,6 +28,7 @@ const LoginPage = () => {
           value={password}
           onChange={onChangePassword}
           fullWidth
+          margin="dense"
         />
       </Main>
       <Footer>Footer here</Footer>

@@ -1,10 +1,17 @@
 import styled from "@emotion/styled";
+import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 
 export const Root = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 3rem 0;
+  }
 `;
 
 export const Main = styled.section`
@@ -18,13 +25,11 @@ export const Main = styled.section`
 
 export const Footer = styled.section`
   height: 10vh;
-  background-color: white;
+  background-color: grey;
 `;
 
+export const LogoText = styled(Typography)``;
 export const InputField = styled(TextField)`
   fieldset {
-    border-radius: 50px;
   }
-
-  margin-top: 1.5rem;
 `;
