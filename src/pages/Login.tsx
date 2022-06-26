@@ -1,3 +1,4 @@
+import React from "react";
 import useInput from "utils/hooks/useInput";
 import {
   Footer,
@@ -13,7 +14,9 @@ const LoginPage = () => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event: React.FormEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  };
   return (
     <Root>
       <Main>
