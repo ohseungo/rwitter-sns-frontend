@@ -8,6 +8,7 @@ import {
   LogoText,
   Main,
   Root,
+  SubLinkContainer,
   SubmitButton,
 } from "./Login.styled";
 
@@ -46,10 +47,12 @@ const LoginPage = () => {
           <SubmitButton type="submit" fullWidth variant="contained">
             로그인하기
           </SubmitButton>
-          <Grid container>
-            <Grid item>비밀번호 찾기</Grid>
+          <SubLinkContainer container>
+            <Grid item xs>
+              비밀번호 찾기
+            </Grid>
             <Grid item>회원가입</Grid>
-          </Grid>
+          </SubLinkContainer>
         </LoginForm>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>

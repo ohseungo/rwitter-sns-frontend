@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Box from "@mui/system/Box";
+import { Grid } from "@mui/material";
 
 export const Root = styled.div`
   height: 100vh;
@@ -44,4 +45,8 @@ export const SubmitButton = styled(Button)`
   height: 3rem;
 
   border-radius: 1rem;
+`;
+
+export const SubLinkContainer = styled(Grid)`
+  padding: 1rem 0;
 `;
