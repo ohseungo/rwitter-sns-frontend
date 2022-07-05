@@ -23,7 +23,6 @@ export const Main = styled.section`
 export const Footer = styled.section`
   height: 10vh;
   text-align: center;
-  background-color: grey;
 `;
 
 export const LogoText = styled(Typography)`
