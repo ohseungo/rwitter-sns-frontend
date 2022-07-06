@@ -16,9 +16,14 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
-  const handleSubmit = useCallback((event: React.FormEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  }, []);
+  const handleSubmit = useCallback(
+    (event: React.FormEvent<HTMLDivElement>) => {
+      event.preventDefault();
+      console.log(email, password);
+      setLoggedIn(true);
+    },
+    [email, password]
+  );
   return (
     <Root>
       <Main>
