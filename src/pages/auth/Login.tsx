@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useCallback } from "react";
 import useInput from "utils/hooks/useInput";
 import {
   Footer,
@@ -12,13 +12,13 @@ import {
   SubmitButton,
 } from "./Login.styled";
 
-const LoginPage = () => {
+const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLDivElement>) => {
+  const handleSubmit = useCallback((event: React.FormEvent<HTMLDivElement>) => {
     event.preventDefault();
-  };
+  }, []);
   return (
     <Root>
       <Main>

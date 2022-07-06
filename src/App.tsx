@@ -6,7 +6,11 @@ function App() {
   const [userInfo, setUserInfo] = useState<object>({});
   return (
     <LayoutContainer>
-      <ManagedRouterComponent isLoggedIn={isLoggedIn} userInfo={userInfo} />
+      <ManagedRouterComponent
+        isLoggedIn={isLoggedIn}
+        setLoggedIn={setLoggedIn}
+        userInfo={userInfo}
+      />
     </LayoutContainer>
   );
 }

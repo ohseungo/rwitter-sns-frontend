@@ -5,6 +5,7 @@ import { ManagedRouterProps } from "utils/types";
 
 const ManagedRouterComponent = ({
   isLoggedIn,
+  setLoggedIn,
   userInfo,
 }: ManagedRouterProps) => {
   return (
@@ -14,7 +15,10 @@ const ManagedRouterComponent = ({
           <div>Hello Logged in</div>
         ) : (
           <>
-            <Route path="/" element={<LoginPage />}></Route>
+            <Route
+              path="/"
+              element={<LoginPage setLoggedIn={setLoggedIn} />}
+            ></Route>
           </>
         )}
       </Routes>
