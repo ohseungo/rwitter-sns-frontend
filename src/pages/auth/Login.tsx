@@ -19,7 +19,6 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const handleSubmit = useCallback(
     (event: React.FormEvent<HTMLDivElement>) => {
       event.preventDefault();
-      console.log(email, password);
       setLoggedIn(true);
     },
     [email, password]
