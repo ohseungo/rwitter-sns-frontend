@@ -1,5 +1,5 @@
 import LoginPage from "pages/auth/Login";
-import TestPage from "pages/auth/Test";
+import HomePage from "pages/Home";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ManagedRouterProps } from "utils/types";
 
@@ -12,7 +12,7 @@ const ManagedRouterComponent = ({
     <Router>
       <Routes>
         {isLoggedIn ? (
-          <div>Hello Logged in</div>
+          <Route path="/" element={<HomePage />} />
         ) : (
           <>
             <Route
