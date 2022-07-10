@@ -2,7 +2,7 @@ import { HeaderRoot, LogoText } from "./Header.styled";
 
 const Header = () => {
   return (
-    <HeaderRoot>
+    <HeaderRoot color="transparent" elevation={0}>
       <LogoText>Hello</LogoText>
     </HeaderRoot>
   );
