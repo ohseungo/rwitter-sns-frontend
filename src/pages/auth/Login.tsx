@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useCallback } from "react";
+import { Link } from "react-router-dom";
 import useInput from "utils/hooks/useInput";
 import {
   Footer,
@@ -22,7 +23,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
       console.log(email, password);
       setLoggedIn(true);
     },
-    [email, password]
+    [email, password, setLoggedIn]
   );
   return (
     <Root>
@@ -54,9 +55,11 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
           </SubmitButton>
           <SubLinkContainer container>
             <Grid item xs>
-              비밀번호 찾기
+              <Link to="/">비밀번호 찾기</Link>
             </Grid>
-            <Grid item>회원가입</Grid>
+            <Grid item>
+              <Link to="/">회원가입</Link>
+            </Grid>
           </SubLinkContainer>
         </LoginForm>
       </Main>

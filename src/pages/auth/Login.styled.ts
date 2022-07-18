@@ -48,4 +48,9 @@ export const SubmitButton = styled(Button)`
 
 export const SubLinkContainer = styled(Grid)`
   padding: 1rem 0;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
 `;
