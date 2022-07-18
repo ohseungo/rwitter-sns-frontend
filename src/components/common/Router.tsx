@@ -11,7 +11,7 @@ const ManagedRouterComponent = ({
 }: ManagedRouterProps) => {
   return (
     <Router>
-      {isLoggedIn && <Header />}
+      {isLoggedIn && <Header setLoggedIn={setLoggedIn} />}
       <Routes>
         {isLoggedIn ? (
           <Route path="/" element={<HomePage />} />
