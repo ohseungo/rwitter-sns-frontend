@@ -1,7 +1,12 @@
 import LoginPage from "pages/auth/Login";
 import HomePage from "pages/home/Home";
 import ProfilePage from "pages/profile/Profile";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { ManagedRouterProps } from "utils/types";
 import Header from "./Header";
 
@@ -20,7 +25,10 @@ const ManagedRouterComponent = ({
             <Route path="/profile" element={<ProfilePage />} />
           </>
         ) : (
-          <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+          <>
+            <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </>
         )}
       </Routes>
     </Router>
