@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import TextField from "@mui/material/TextField";
-import { Form as ManagedForm } from "components/common/StyledComponent";
 
-export const Root = styled(ManagedForm)`
+export const Root = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -31,8 +31,6 @@ export const LogoText = styled(Typography)`
   margin: 3rem 0;
 `;
 
-export const LoginForm = styled(Form)``;
-
 export const InputField = styled(TextField)`
   fieldset {
   }

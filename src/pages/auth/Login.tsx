@@ -5,13 +5,13 @@ import useInput from "utils/hooks/useInput";
 import {
   Footer,
   InputField,
-  LoginForm,
   LogoText,
   Main,
   Root,
   SubLinkContainer,
   SubmitButton,
 } from "./Login.styled";
+import { Form } from "components/common/StyledComponent";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
@@ -29,7 +29,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     <Root>
       <Main>
         <LogoText variant="h1">무슨 일이 일어나고 있나요?</LogoText>
-        <LoginForm onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           <InputField
             id="email-input"
             label="Email"
@@ -61,7 +61,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
               <Link to="/">회원가입</Link>
             </Grid>
           </SubLinkContainer>
-        </LoginForm>
+        </Form>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>
     </Root>
