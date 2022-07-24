@@ -1,9 +1,13 @@
+import ProfileEditForm from "components/profile/ProfileEditForm";
 import { Root } from "./Profile.styled";
 
 const ProfilePage = () => {
   return (
     <Root>
-      <div>Hello Profile</div>
+      <div>
+        Hello Profile
+        <ProfileEditForm />
+      </div>
     </Root>
   );
 };
