@@ -29,7 +29,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     <Root>
       <Main>
         <LogoText variant="h1">무슨 일이 일어나고 있나요?</LogoText>
-        <LoginForm component="form" onSubmit={handleSubmit}>
+        <LoginForm onSubmit={handleSubmit}>
           <InputField
             id="email-input"
             label="Email"

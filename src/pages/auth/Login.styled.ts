@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Box from "@mui/system/Box";
 import { Grid } from "@mui/material";
+import { Form } from "components/common/StyledComponent";
 
 export const Root = styled.div`
   height: 100vh;
@@ -31,7 +31,7 @@ export const LogoText = styled(Typography)`
   margin: 3rem 0;
 `;
 
-export const LoginForm = styled(Box)``;
+export const LoginForm = styled(Form)``;
 
 export const InputField = styled(TextField)`
   fieldset {
