@@ -1,6 +1,7 @@
 import { Root } from "./ProfileEditForm.styled";
 import React, { useCallback } from "react";
 import { Form } from "components/common/StyledComponent";
+import { TextField } from "@mui/material";
 
 const ProfileEditForm = () => {
   const handleSubmit = useCallback((event: React.FormEvent<HTMLDivElement>) => {
@@ -9,7 +10,7 @@ const ProfileEditForm = () => {
   return (
     <Root>
       <Form onSubmit={handleSubmit}>
-        <span>Hello Edit Form</span>
+        <TextField label="닉네임" variant="standard" defaultValue="현닉네임" />
       </Form>
     </Root>
   );
