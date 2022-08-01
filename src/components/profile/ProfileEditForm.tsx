@@ -10,7 +10,11 @@ const ProfileEditForm = () => {
   return (
     <Root>
       <Form onSubmit={handleSubmit}>
-        <TextField label="닉네임" variant="standard" defaultValue="현닉네임" />
+        <TextField
+          label="닉네임"
+          variant="standard"
+          defaultValue="현재 닉네임"
+        />
       </Form>
     </Root>
   );
