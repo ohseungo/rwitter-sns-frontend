@@ -4,6 +4,6 @@ export interface ManagedRouterProps {
   userInfo: object;
 }
 
-export interface FollowListProps {
+export interface UserListProps {
   userList: string[];
 }

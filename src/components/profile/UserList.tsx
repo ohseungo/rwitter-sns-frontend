@@ -8,12 +8,12 @@ import IconButton from "@mui/material/IconButton";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const constant = ["Hi", "Hello"];
+import { UserListProps } from "utils/types";
 
-const UserList = () => {
+const UserList = ({ userList }: UserListProps) => {
   return (
     <List>
-      {constant.map((name) => (
+      {userList.map((name: string) => (
         <ListItem
           secondaryAction={
             <IconButton edge="end" aria-label="delete">
