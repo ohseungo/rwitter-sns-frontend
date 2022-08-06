@@ -3,3 +3,7 @@ export interface ManagedRouterProps {
   setLoggedIn: (value: boolean) => void;
   userInfo: object;
 }
+
+export interface FollowListProps {
+  userList: string[];
+}

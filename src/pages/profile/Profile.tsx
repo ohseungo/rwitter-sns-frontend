@@ -1,15 +1,12 @@
-import FollowList from "components/profile/follow/FollowList";
+import UserList from "components/profile/UserList";
 import ProfileEditForm from "components/profile/ProfileEditForm";
 import { Root } from "./Profile.styled";
 
 const ProfilePage = () => {
   return (
     <Root>
-      <div>
-        Hello Profile
-        <ProfileEditForm />
-        <FollowList />
-      </div>
+      <ProfileEditForm />
+      <UserList />
     </Root>
   );
 };

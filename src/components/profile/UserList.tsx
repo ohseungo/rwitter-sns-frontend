@@ -10,7 +10,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const constant = ["Hi", "Hello"];
 
-const FollowingList = () => {
+const UserList = () => {
   return (
     <List>
       {constant.map((name) => (
@@ -33,4 +33,4 @@ const FollowingList = () => {
   );
 };
 
-export default FollowingList;
+export default UserList;
