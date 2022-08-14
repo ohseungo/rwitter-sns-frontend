@@ -11,7 +11,8 @@ import {
   SubLinkContainer,
   SubmitButton,
 } from "./Login.styled";
-import { Form } from "components/common/StyledComponent";
+
+import { Form } from "components/common/Form";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");

@@ -11,6 +11,7 @@ const ProfilePage = () => {
     <Root>
       <ProfileEditForm />
       <ProfileText>팔로잉</ProfileText>
+      <Tabs></Tabs>
       <UserList userList={dummyUserList} />
     </Root>
   );
