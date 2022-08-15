@@ -12,7 +12,7 @@ import {
   SubmitButton,
 } from "./Login.styled";
 
-import { Form } from "components/common/Form";
+import { Form } from "components/base/Form";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");

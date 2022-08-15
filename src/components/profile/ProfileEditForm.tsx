@@ -1,6 +1,6 @@
 import { Root } from "./ProfileEditForm.styled";
 import React, { useCallback } from "react";
-import { Form } from "components/common/Form";
+import { Form } from "components/base/Form";
 import { TextField } from "@mui/material";
 
 const ProfileEditForm = () => {
