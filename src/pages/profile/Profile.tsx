@@ -16,6 +16,7 @@ function a11yProps(index: number) {
 
 const ProfilePage = () => {
   const dummyUserList = ["친구", "친구아님"];
+  const dummyUserList2 = ["친구2", "친구아님2"];
 
   const [value, setValue] = useState(0);
 
@@ -32,16 +33,15 @@ const ProfilePage = () => {
         onChange={handleChange}
         aria-label="basic tabs example"
       >
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
+        <Tab label="팔로우" {...a11yProps(0)} />
+        <Tab label="팔로워" {...a11yProps(1)} />
       </Tabs>
       <TabPanel selectedIndex={value} index={0}>
-        Item One
+        <UserList userList={dummyUserList} />
       </TabPanel>
       <TabPanel selectedIndex={value} index={1}>
-        Item Two
+        <UserList userList={dummyUserList2} />
       </TabPanel>
-      <UserList userList={dummyUserList} />
     </Root>
   );
 };
