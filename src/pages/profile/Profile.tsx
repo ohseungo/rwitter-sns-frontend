@@ -27,7 +27,6 @@ const ProfilePage = () => {
   return (
     <Root>
       <ProfileEditForm />
-      <ProfileText>팔로잉</ProfileText>
       <Tabs
         value={value}
         onChange={handleChange}
