@@ -13,6 +13,7 @@ import {
 } from "./Login.styled";
 
 import { Form } from "components/base/Form";
+import Modal from "components/common/Modal";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");

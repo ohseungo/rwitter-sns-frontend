@@ -1,5 +1,4 @@
 import LoginPage from "pages/auth/Login";
-import SignUpPage from "pages/auth/SignUp";
 import HomePage from "pages/home/Home";
 import ProfilePage from "pages/profile/Profile";
 import {
@@ -29,7 +28,6 @@ const ManagedRouterComponent = ({
         ) : (
           <>
             <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-            <Route path="/signup" element={<SignUpPage />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </>
         )}
