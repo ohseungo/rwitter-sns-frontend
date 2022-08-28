@@ -1,8 +1,10 @@
+import { Main, Root } from "./SignUp.styled";
+
 const SignUpPage = () => {
   return (
-    <div>
-      <div>Hello Sign Up</div>
-    </div>
+    <Root>
+      <Main>Hello Sign Up</Main>
+    </Root>
   );
 };
 

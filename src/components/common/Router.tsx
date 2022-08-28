@@ -29,7 +29,7 @@ const ManagedRouterComponent = ({
         ) : (
           <>
             <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-            <Route path="/" element={<SignUpPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </>
         )}
