@@ -1,4 +1,5 @@
 import LoginPage from "pages/auth/Login";
+import SignUpPage from "pages/auth/SignUp";
 import HomePage from "pages/home/Home";
 import ProfilePage from "pages/profile/Profile";
 import {
@@ -23,10 +24,12 @@ const ManagedRouterComponent = ({
           <>
             <Route path="/" element={<HomePage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
           </>
         ) : (
           <>
             <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+            <Route path="/" element={<SignUpPage />} />
             <Route path="*" element={<Navigate replace to="/" />} />
           </>
         )}
