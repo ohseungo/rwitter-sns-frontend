@@ -1,8 +1,14 @@
 import Dialog from "@mui/material/Dialog";
 import React from "react";
 
-const Modal = ({ children }: { children: React.ReactNode }) => {
-  return <Dialog open={true}>{children}</Dialog>;
+const Modal = ({
+  isOpen,
+  children,
+}: {
+  isOpen: boolean;
+  children: React.ReactNode;
+}) => {
+  return <Dialog open={isOpen}>{children}</Dialog>;
 };
 
 export default Modal;
