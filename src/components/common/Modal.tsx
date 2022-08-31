@@ -1,14 +1,17 @@
 import Dialog from "@mui/material/Dialog";
 import React from "react";
 
-const Modal = ({
-  isOpen,
-  children,
-}: {
+interface ModalProps {
   isOpen: boolean;
   children: React.ReactNode;
-}) => {
-  return <Dialog open={isOpen}>{children}</Dialog>;
+  handleClose?: () => void;
+}
+const ManagedModal = ({ isOpen, children, handleClose }: ModalProps) => {
+  return (
+    <Dialog open={isOpen} onClose={handleClose}>
+      {children}
+    </Dialog>
+  );
 };
 
-export default Modal;
+export default ManagedModal;

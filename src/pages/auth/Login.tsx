@@ -14,6 +14,7 @@ import {
 
 import { Form } from "components/base/Form";
 import Modal from "components/common/Modal";
+import ManagedModal from "components/common/Modal";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
@@ -66,6 +67,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
         </Form>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>
+      <ManagedModal isOpen={true}>Hello</ManagedModal>
     </Root>
   );
 };
