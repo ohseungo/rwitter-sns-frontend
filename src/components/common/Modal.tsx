@@ -4,11 +4,11 @@ import React from "react";
 interface ModalProps {
   isOpen: boolean;
   children: React.ReactNode;
-  handleClose?: () => void;
+  onClose?: () => void;
 }
-const ManagedModal = ({ isOpen, children, handleClose }: ModalProps) => {
+const ManagedModal = ({ isOpen, children, onClose }: ModalProps) => {
   return (
-    <Dialog open={isOpen} onClose={handleClose}>
+    <Dialog open={isOpen} onClose={onClose}>
       {children}
     </Dialog>
   );
