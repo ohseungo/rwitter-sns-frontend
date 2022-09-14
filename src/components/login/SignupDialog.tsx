@@ -1,7 +1,6 @@
-import { Typography } from "@mui/material";
 import ManagedModal from "components/common/Modal";
 import { useState } from "react";
-import { Root } from "./SignupDialog.styled";
+import { Root, DialogTitle } from "./SignupDialog.styled";
 
 const SignupDialog = () => {
   const [isOpen, setOpen] = useState(true);
@@ -12,7 +11,7 @@ const SignupDialog = () => {
   return (
     <ManagedModal isOpen={isOpen} onClose={handleClose}>
       <Root>
-        <Typography variant="h5">Sign Up</Typography>
+        <DialogTitle variant="h5">Sign Up</DialogTitle>
       </Root>
     </ManagedModal>
   );

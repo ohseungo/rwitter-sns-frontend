@@ -4,4 +4,4 @@ import Box from "@mui/material/Box";
 
 export const Root = styled(Box)``;
 
-export const Title = styled(Typography)``;
+export const DialogTitle = styled(Typography)``;
