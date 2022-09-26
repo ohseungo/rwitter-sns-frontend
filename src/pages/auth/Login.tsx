@@ -34,7 +34,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
         <Form onSubmit={handleSubmit}>
           <InputField
             id="email-input"
-            label="Email"
+            placeholder="이메일"
             type="email"
             value={email}
             onChange={onChangeEmail}
@@ -44,7 +44,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
           />
           <InputField
             id="password-input"
-            label="Password"
+            placeholder="비밀번호"
             type="password"
             variant="outlined"
             value={password}

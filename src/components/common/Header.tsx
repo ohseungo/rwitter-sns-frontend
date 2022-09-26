@@ -8,7 +8,7 @@ const Header = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     <HeaderRoot color="transparent" position="sticky" elevation={0}>
       <Toolbar>
         <LogoLink to="/">
-          <LogoText variant="h6">Rwitter</LogoText>
+          <LogoText variant="h6">에센에스</LogoText>
         </LogoLink>
         <Link to="/profile">
           <ProfileButton />
