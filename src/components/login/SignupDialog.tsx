@@ -11,7 +11,7 @@ const SignupDialog = () => {
   return (
     <ManagedModal isOpen={isOpen} onClose={handleClose}>
       <Root>
-        <DialogTitle variant="h5">Sign Up</DialogTitle>
+        <DialogTitle variant="h5">회원가입</DialogTitle>
       </Root>
     </ManagedModal>
   );

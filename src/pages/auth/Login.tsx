@@ -66,6 +66,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
         </Form>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>
+      <SignupDialog />
     </Root>
   );
 };

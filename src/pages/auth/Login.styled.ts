@@ -26,6 +26,9 @@ export const Footer = styled.section`
 
 export const LogoText = styled(Typography)`
   font-size: 3rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 8vw;
+  }
   font-weight: 700;
   margin: 3rem 0;
 `;
