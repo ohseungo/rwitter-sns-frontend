@@ -5,11 +5,13 @@
   --header-max-width: 270px;
 
   --main-border-color: #eeefef;
+  --main-font-color: #262626;
 }
 
 body {
   margin: 0;
   font-family: "Gowun Dodum", sans-serif;
+  color: var(--main-font-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

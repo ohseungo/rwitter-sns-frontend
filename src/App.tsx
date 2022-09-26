@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import ManagedRouterComponent from "components/common/Router";
 import LayoutContainer from "components/common/LayoutContainer";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import THEME from "config/Theme";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState<object>({});
-
-  const THEME = createTheme({
-    typography: {
-      fontFamily: `sans-serif`,
-    },
-  });
 
   return (
     <ThemeProvider theme={THEME}>
