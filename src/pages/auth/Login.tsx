@@ -27,6 +27,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     },
     [email, password, setLoggedIn]
   );
+
   return (
     <Root>
       <Main>
