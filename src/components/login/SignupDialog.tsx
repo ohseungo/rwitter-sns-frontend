@@ -1,8 +1,9 @@
 import { Form } from "components/base/Form";
 import ManagedModal from "components/common/Modal";
 import { useState } from "react";
-import { Root, DialogTitle, InputField } from "./SignupDialog.styled";
+import { InputField } from "./SignupDialog.styled";
 import useInput from "utils/hooks/useInput";
+import { DialogContent, DialogTitle } from "@mui/material";
 
 const SignupDialog = () => {
   const [isOpen, setOpen] = useState(true);
@@ -16,12 +17,10 @@ const SignupDialog = () => {
   const handleSubmit = () => {};
   return (
     <ManagedModal isOpen={isOpen}>
-      <Root>
-        <DialogTitle variant="h5">회원가입</DialogTitle>
-        <Form
-          onSubmit={handleSubmit}
-          style={{ width: "100%", marginTop: "1rem" }}
-        >
+      <DialogTitle>회원가입</DialogTitle>
+      <DialogContent>
+        {" "}
+        <Form onSubmit={handleSubmit}>
           <InputField
             id="email-input"
             placeholder="이메일"
@@ -43,9 +42,40 @@ const SignupDialog = () => {
             margin="dense"
           />
         </Form>
-      </Root>
+      </DialogContent>
     </ManagedModal>
   );
 };
+
+/* <ManagedModal isOpen={isOpen}>
+<Root>
+  <DialogTitle variant="h5">회원가입</DialogTitle>
+  <Form
+    onSubmit={handleSubmit}
+    style={{ width: "100%", marginTop: "1rem" }}
+  >
+    <InputField
+      id="email-input"
+      placeholder="이메일"
+      type="email"
+      value={email}
+      onChange={onChangeEmail}
+      fullWidth
+      margin="dense"
+      autoFocus
+    />
+    <InputField
+      id="password-input"
+      placeholder="비밀번호"
+      type="password"
+      variant="outlined"
+      value={password}
+      onChange={onChangePassword}
+      fullWidth
+      margin="dense"
+    />
+  </Form>
+</Root>
+</ManagedModal> */
 
 export default SignupDialog;

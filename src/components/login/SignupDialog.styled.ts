@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
 export const Root = styled(Box)`
-  margin: 1rem;
+  padding: 1.5rem 5rem;
   width: 70vw;
   max-width: 480px;
 
