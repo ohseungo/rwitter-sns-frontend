@@ -3,12 +3,19 @@ import ManagedModal from "components/common/Modal";
 import { useState } from "react";
 import { InputField } from "./SignupDialog.styled";
 import useInput from "utils/hooks/useInput";
-import { DialogContent, DialogTitle } from "@mui/material";
+import {
+  DialogContent,
+  DialogTitle,
+  DialogActions,
+  Button,
+} from "@mui/material";
 
-const SignupDialog = () => {
-  const [isOpen, setOpen] = useState(true);
+const SignupDialog = ({ open }: { open: boolean }) => {
+  const [isOpen, setOpen] = useState(open);
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
+  const { value: passwordCheck, onChange: onChangePasswordCheck } =
+    useInput("");
 
   const handleClose = () => {
     setOpen(false);
@@ -41,8 +48,23 @@ const SignupDialog = () => {
             fullWidth
             margin="dense"
           />
+          <InputField
+            id="password-check-input"
+            placeholder="비밀번호 확인"
+            type="password"
+            variant="outlined"
+            value={passwordCheck}
+            onChange={onChangePasswordCheck}
+            fullWidth
+            margin="dense"
+          />
         </Form>
       </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose} autoFocus>
+          회원가입
+        </Button>
+      </DialogActions>
     </ManagedModal>
   );
 };

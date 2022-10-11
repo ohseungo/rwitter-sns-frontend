@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import useInput from "utils/hooks/useInput";
 import {
@@ -18,6 +18,8 @@ import SignupDialog from "components/login/SignupDialog";
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
+
+  const [isSignupDialogOpen, setSingnupDialogOpen] = useState<boolean>(false);
 
   const handleSubmit = useCallback(
     (event: React.FormEvent<HTMLDivElement>) => {
@@ -67,7 +69,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
         </Form>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>
-      <SignupDialog />
+      <SignupDialog open={true} />
     </Root>
   );
 };
