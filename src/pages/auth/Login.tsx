@@ -1,4 +1,5 @@
-import { Grid } from "@mui/material";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import useInput from "utils/hooks/useInput";
@@ -19,7 +20,7 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
-  const [isSignupDialogOpen, setSingnupDialogOpen] = useState<boolean>(false);
+  const [isSignupDialogOpen, setSignupDialogOpen] = useState<boolean>(false);
 
   const handleSubmit = useCallback(
     (event: React.FormEvent<HTMLDivElement>) => {
@@ -30,6 +31,13 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     [email, password, setLoggedIn]
   );
 
+  const handleSignupDialogOpen = () => {
+    setSignupDialogOpen(true);
+  };
+
+  const handleSignupDialogClose = () => {
+    setSignupDialogOpen(false);
+  };
   return (
     <Root>
       <Main>
@@ -60,16 +68,21 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
           </SubmitButton>
           <SubLinkContainer container>
             <Grid item xs>
-              <Link to="/">비밀번호 찾기</Link>
+              <Button variant="text">비밀번호 찾기</Button>
             </Grid>
             <Grid item>
-              <Link to="/">회원가입</Link>
+              <Button variant="text" onClick={handleSignupDialogOpen}>
+                회원가입
+              </Button>
             </Grid>
           </SubLinkContainer>
         </Form>
       </Main>
       <Footer>© 2022 by RickSW.dev</Footer>
-      <SignupDialog open={true} />
+      <SignupDialog
+        open={isSignupDialogOpen}
+        onClose={handleSignupDialogClose}
+      />
     </Root>
   );
 };

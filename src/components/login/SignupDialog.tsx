@@ -1,6 +1,5 @@
 import { Form } from "components/base/Form";
 import ManagedModal from "components/common/Modal";
-import { useState } from "react";
 import { InputField } from "./SignupDialog.styled";
 import useInput from "utils/hooks/useInput";
 import {
@@ -10,26 +9,25 @@ import {
   Button,
 } from "@mui/material";
 
-const SignupDialog = ({ open }: { open: boolean }) => {
-  const [isOpen, setOpen] = useState(open);
+const SignupDialog = ({ open, onClose }: { open: boolean; onClose: any }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
   const { value: passwordCheck, onChange: onChangePasswordCheck } =
     useInput("");
 
   const handleClose = () => {
-    setOpen(false);
+    onClose();
   };
 
   const handleSubmit = () => {};
   return (
-    <ManagedModal isOpen={isOpen}>
+    <ManagedModal isOpen={open}>
       <DialogTitle>회원가입</DialogTitle>
       <DialogContent>
         {" "}
         <Form onSubmit={handleSubmit}>
           <InputField
-            id="email-input"
+            id="signup-email-input"
             placeholder="이메일"
             type="email"
             value={email}
@@ -39,7 +37,7 @@ const SignupDialog = ({ open }: { open: boolean }) => {
             autoFocus
           />
           <InputField
-            id="password-input"
+            id="signup-password-input"
             placeholder="비밀번호"
             type="password"
             variant="outlined"
@@ -49,7 +47,7 @@ const SignupDialog = ({ open }: { open: boolean }) => {
             margin="dense"
           />
           <InputField
-            id="password-check-input"
+            id="signup-password-check-input"
             placeholder="비밀번호 확인"
             type="password"
             variant="outlined"
@@ -61,9 +59,8 @@ const SignupDialog = ({ open }: { open: boolean }) => {
         </Form>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose} autoFocus>
-          회원가입
-        </Button>
+        <Button onClick={handleClose}>회원가입</Button>
+        <Button onClick={handleClose}>닫기</Button>
       </DialogActions>
     </ManagedModal>
   );
