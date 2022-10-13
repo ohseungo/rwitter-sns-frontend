@@ -2,12 +2,11 @@ import { Form } from "components/base/Form";
 import ManagedModal from "components/common/Modal";
 import { InputField } from "./SignupDialog.styled";
 import useInput from "utils/hooks/useInput";
-import {
-  DialogContent,
-  DialogTitle,
-  DialogActions,
-  Button,
-} from "@mui/material";
+
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogActions from "@mui/material/DialogActions";
+import Button from "@mui/material/Button";
 
 const SignupDialog = ({ open, onClose }: { open: boolean; onClose: any }) => {
   const { value: email, onChange: onChangeEmail } = useInput("");
