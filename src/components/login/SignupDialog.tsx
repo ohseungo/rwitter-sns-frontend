@@ -18,7 +18,14 @@ const SignupDialog = ({ open, onClose }: { open: boolean; onClose: any }) => {
     onClose();
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    if (password !== passwordCheck) {
+      //error
+      return;
+    }
+
+    onClose();
+  };
   return (
     <ManagedModal isOpen={open}>
       <DialogTitle>회원가입</DialogTitle>
