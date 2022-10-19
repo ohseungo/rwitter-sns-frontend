@@ -3,6 +3,10 @@ import ManagedRouterComponent from "components/common/Router";
 import LayoutContainer from "components/common/LayoutContainer";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import THEME from "config/Theme";
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "store/reducers";
+
+const store = configureStore({ reducer: rootReducer });
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);

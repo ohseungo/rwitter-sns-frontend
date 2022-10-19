@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface UserState {
   isLoggedIn: boolean;
-  user?: UserType;
+  user?: User;
 }
 
-interface UserType {
+interface User {
   name: string;
 }
 
@@ -18,9 +18,15 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    login(state) {},
+    login(state, action: PayloadAction<User>) {
+      return {
+        ...state,
+        user: action.payload,
+        isLoggedIn: true,
+      };
+    },
   },
 });
 
-export const {} = userSlice.actions;
+export const { login } = userSlice.actions;
 export default userSlice.reducer;
