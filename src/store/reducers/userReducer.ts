@@ -1,15 +1,26 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface UserState {
   isLoggedIn: boolean;
+  user?: UserType;
+}
+
+interface UserType {
   name: string;
 }
 
 const initialState = {
   isLoggedIn: false,
-  name: "Me",
+  user: undefined,
 } as UserState;
 
-const userReducer = createReducer(initialState, (builder) => {});
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+  reducers: {
+    login(state) {},
+  },
+});
 
-export default userReducer;
+export const {} = userSlice.actions;
+export default userSlice.reducer;
