@@ -5,6 +5,7 @@ import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import THEME from "config/Theme";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "store/reducers";
+import { Provider } from "react-redux";
 
 const store = configureStore({ reducer: rootReducer });
 
@@ -13,15 +14,17 @@ function App() {
   const [userInfo, setUserInfo] = useState<object>({});
 
   return (
-    <ThemeProvider theme={THEME}>
-      <LayoutContainer>
-        <ManagedRouterComponent
-          isLoggedIn={isLoggedIn}
-          setLoggedIn={setLoggedIn}
-          userInfo={userInfo}
-        />
-      </LayoutContainer>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={THEME}>
+        <LayoutContainer>
+          <ManagedRouterComponent
+            isLoggedIn={isLoggedIn}
+            setLoggedIn={setLoggedIn}
+            userInfo={userInfo}
+          />
+        </LayoutContainer>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
