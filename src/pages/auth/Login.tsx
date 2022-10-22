@@ -15,8 +15,11 @@ import {
 
 import { Form } from "components/base/Form";
 import SignupDialog from "components/login/SignupDialog";
+import { useDispatch } from "react-redux";
+import { login } from "store/reducers/userReducer";
 
 const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
+  const dispatch = useDispatch();
   const { value: email, onChange: onChangeEmail } = useInput("");
   const { value: password, onChange: onChangePassword } = useInput("");
 
@@ -26,7 +29,8 @@ const LoginPage = ({ setLoggedIn }: { setLoggedIn: Function }) => {
     (event: React.FormEvent<HTMLDivElement>) => {
       event.preventDefault();
       console.log(email, password);
-      setLoggedIn(true);
+      // setLoggedIn(true);
+      dispatch(login({ name: email }));
     },
     [email, password, setLoggedIn]
   );
