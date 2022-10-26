@@ -25,6 +25,13 @@ const userSlice = createSlice({
         isLoggedIn: true,
       };
     },
+    logout(state) {
+      return {
+        ...state,
+        user: undefined,
+        isLoggedIn: false,
+      };
+    },
   },
 });
 
