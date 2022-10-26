@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface PostsState {
   posts: Post[];
@@ -19,10 +19,26 @@ const initialState = {
   posts: [],
 } as PostsState;
 
+const dummyPost = {
+  id: "2",
+  CreatedUser: {
+    id: "friend",
+    name: "friend",
+  },
+  content: "추가 테스트",
+} as Post;
+
 const postsSlice = createSlice({
   name: "posts",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    addPost(state, action: PayloadAction<Post>) {
+      return {
+        ...state,
+        posts: [dummyPost, ...state.posts],
+      };
+    },
+  },
 });
 
 export const {} = postsSlice.actions;
